@@ -49,6 +49,7 @@ function App() {
             className="answer-input"
             type="text"
             placeholder="i________"
+            maxlength="9"
             value={answer2}
             onChange={(event) => {
               const { value } = event.target;
@@ -66,6 +67,7 @@ function App() {
             className="answer-input"
             type="text"
             placeholder="r_______"
+            maxlength="9"
             value={answer1}
             onChange={(event) => {
               const { value } = event.target;
@@ -83,6 +85,7 @@ function App() {
             className="answer-input"
             type="text"
             placeholder="l___"
+            maxlength="9"
             value={answer4}
             onChange={(event) => {
               const { value } = event.target;
@@ -100,6 +103,7 @@ function App() {
             className="answer-input"
             type="text"
             placeholder="b________"
+            maxlength="9"
             value={answer5}
             onChange={(event) => {
               const { value } = event.target;
@@ -117,6 +121,7 @@ function App() {
             className="answer-input"
             type="text"
             placeholder="g____"
+            maxlength="9"
             value={answer6}
             onChange={(event) => {
               const { value } = event.target;
@@ -134,6 +139,7 @@ function App() {
             className="answer-input"
             type="text"
             placeholder="m________"
+            maxlength="9"
             value={answer3}
             onChange={(event) => {
               const { value } = event.target;
