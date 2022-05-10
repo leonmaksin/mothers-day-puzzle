@@ -17,9 +17,24 @@ function App() {
     else alert('incorrect, please try again\nhint: what do the numbers mean?');
   }
 
+  const revealAnswers = async () => {
+    setAnswer1("impulsive");
+    setAnswer2("robotics");
+    setAnswer3("lego");
+    setAnswer4("boardwalk");
+    setAnswer5("green");
+    setAnswer6("minecraft");
+  }
+
   return (
     <div className="App">
       <div className="col">
+        <button
+          className="reveal-button"
+          onClick={ revealAnswers }
+        >
+          Reveal Answers
+        </button>
         <button
           className="submit-button"
           onClick={ submitCode }
@@ -50,24 +65,6 @@ function App() {
             type="text"
             placeholder="i________"
             maxlength="9"
-            value={answer2}
-            onChange={(event) => {
-              const { value } = event.target;
-              setAnswer2(value);
-            }}
-          />
-          <div className="answer-map">
-            <h1>{answer2}</h1>
-          </div>
-        </div>
-
-        <div className="row question">
-          <h1>Ilan's favorite building activity is ________</h1>
-          <input
-            className="answer-input"
-            type="text"
-            placeholder="r_______"
-            maxlength="9"
             value={answer1}
             onChange={(event) => {
               const { value } = event.target;
@@ -80,11 +77,47 @@ function App() {
         </div>
 
         <div className="row question">
+          <h1>Ilan's favorite building activity is ________</h1>
+          <input
+            className="answer-input"
+            type="text"
+            placeholder="r_______"
+            maxlength="9"
+            value={answer2}
+            onChange={(event) => {
+              const { value } = event.target;
+              setAnswer2(value);
+            }}
+          />
+          <div className="answer-map">
+            <h1>{answer2}</h1>
+          </div>
+        </div>
+
+        <div className="row question">
           <h1>Leon's favorite childhood toy is ____</h1>
           <input
             className="answer-input"
             type="text"
             placeholder="l___"
+            maxlength="9"
+            value={answer3}
+            onChange={(event) => {
+              const { value } = event.target;
+              setAnswer3(value);
+            }}
+          />
+          <div className="answer-map">
+            <h1>{answer3}</h1>
+          </div>
+        </div>
+
+        <div className="row question">
+          <h1>Abby walks Simba on the _________ by the beach</h1>
+          <input
+            className="answer-input"
+            type="text"
+            placeholder="b________"
             maxlength="9"
             value={answer4}
             onChange={(event) => {
@@ -98,11 +131,11 @@ function App() {
         </div>
 
         <div className="row question">
-          <h1>Abby walks Simba on the _________ by the beach</h1>
+          <h1 className="question-statement">Next year Daniela will be yelling "go big _____"</h1>
           <input
             className="answer-input"
             type="text"
-            placeholder="b________"
+            placeholder="g____"
             maxlength="9"
             value={answer5}
             onChange={(event) => {
@@ -114,13 +147,13 @@ function App() {
             <h1>{answer5}</h1>
           </div>
         </div>
-
+        
         <div className="row question">
-          <h1 className="question-statement">Next year Daniela will be yelling "go big _____"</h1>
+          <h1>Michael's favorite video game is _________</h1>
           <input
             className="answer-input"
             type="text"
-            placeholder="g____"
+            placeholder="m________"
             maxlength="9"
             value={answer6}
             onChange={(event) => {
@@ -130,24 +163,6 @@ function App() {
           />
           <div className="answer-map">
             <h1>{answer6}</h1>
-          </div>
-        </div>
-        
-        <div className="row question">
-          <h1>Michael's favorite video game is _________</h1>
-          <input
-            className="answer-input"
-            type="text"
-            placeholder="m________"
-            maxlength="9"
-            value={answer3}
-            onChange={(event) => {
-              const { value } = event.target;
-              setAnswer3(value);
-            }}
-          />
-          <div className="answer-map">
-            <h1>{answer3}</h1>
           </div>
         </div>
 
